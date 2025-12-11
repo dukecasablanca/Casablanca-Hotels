@@ -100,7 +100,7 @@ function PropertiesPageContent() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              <div>
+                <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   <Users className="inline w-4 h-4 mr-1" />
                   Guests
@@ -110,7 +110,7 @@ function PropertiesPageContent() {
                   onChange={(e) => setGuests(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  {[1, 2, 3, 4, 5, 6].map(n => (
+                  {[1, 2].map(n => (
                     <option key={n} value={n}>{n} {n === 1 ? 'Guest' : 'Guests'}</option>
                   ))}
                 </select>

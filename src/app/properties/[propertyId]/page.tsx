@@ -1418,8 +1418,10 @@ export default function PropertyDetailsPage({ params }: { params: Promise<{ prop
                       onChange={handleBookingDetailsChange}
                       className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      {Array.from({ length: selectedRoomType.capacity }, (_, i) => i + 1).map(num => (
-                        <option key={num} value={num}>{num} guest{num !== 1 ? 's' : ''}</option>
+                      {[1, 2].map(num => (
+                        <option key={num} value={num} disabled={selectedRoomType && num > selectedRoomType.capacity}>
+                          {num} guest{num !== 1 ? 's' : ''}
+                        </option>
                       ))}
                     </select>
                   </div>
