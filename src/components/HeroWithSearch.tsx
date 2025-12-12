@@ -285,13 +285,13 @@ export function HeroWithSearch() {
         <div
           className={`
             ${isSearchBarFixed 
-              ? 'fixed top-[80px] left-0 right-0 z-[150]' 
-              : 'absolute bottom-[15%] left-0 right-0 z-10'
+              ? 'fixed top-[70px] sm:top-[80px] left-0 right-0 z-[150]' 
+              : 'absolute bottom-[18%] sm:bottom-[18%] md:bottom-[18%] left-0 right-0 z-10'
             }
             transition-all duration-[1500ms] ease-in-out
           `}
         >
-          <div className="px-4 py-2">
+          <div className="px-2 sm:px-4 py-1 sm:py-2">
             {/* Search Bar Header when expanded or scrollExpanded */}
             <AnimatePresence>
               {(isExpanded || isScrollExpanded) && (
