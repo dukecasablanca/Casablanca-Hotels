@@ -6,18 +6,18 @@ import { Building2, Users, Shield, Star, Clock, MapPin } from 'lucide-react';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-emerald-900 via-emerald-800 to-green-950 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About MotelBooking
+              About <span className="text-yellow-400">Casa Blanca</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100">
-              Your trusted partner for comfortable and affordable accommodations
+            <p className="text-xl md:text-2xl text-yellow-100/80">
+              Your trusted partner for luxury accommodations in Los Angeles
             </p>
           </div>
         </div>
@@ -32,9 +32,9 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Founded in 2020, MotelBooking has been connecting travelers with quality, 
-                affordable accommodations across the country. We believe that everyone deserves 
-                a comfortable place to stay without breaking the bank.
+                Casa Blanca Hotels has been connecting travelers with quality, 
+                luxury accommodations across Los Angeles. We believe that everyone deserves 
+                a premium place to stay that feels like home.
               </p>
             </div>
 
@@ -42,15 +42,15 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  To provide travelers with easy access to clean, comfortable, and affordable 
-                  motel accommodations while supporting local businesses and communities.
+                  To provide travelers with easy access to elegant, comfortable, and luxurious 
+                  hotel accommodations while delivering exceptional service and memorable experiences.
                 </p>
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  To become the leading platform for motel bookings, known for our reliability, 
-                  customer service, and commitment to quality accommodations.
+                  To become the leading boutique hotel collection in Los Angeles, known for our elegance, 
+                  personalized service, and commitment to creating unforgettable stays.
                 </p>
               </div>
             </div>
@@ -58,19 +58,19 @@ export default function AboutPage() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-                <div className="text-gray-600">Partner Motels</div>
+                <div className="text-3xl font-bold text-emerald-800 mb-2">10+</div>
+                <div className="text-gray-600">Premium Properties</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">50K+</div>
-                <div className="text-gray-600">Happy Customers</div>
+                <div className="text-3xl font-bold text-emerald-800 mb-2">50K+</div>
+                <div className="text-gray-600">Happy Guests</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">100K+</div>
-                <div className="text-gray-600">Bookings Made</div>
+                <div className="text-3xl font-bold text-emerald-800 mb-2">100K+</div>
+                <div className="text-gray-600">Nights Booked</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">4.8</div>
+                <div className="text-3xl font-bold text-yellow-600 mb-2">4.8</div>
                 <div className="text-gray-600">Average Rating</div>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-emerald-900/5 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -93,8 +93,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <Card className="text-center border-0 shadow-lg">
               <CardHeader>
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-8 w-8 text-blue-600" />
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-emerald-800" />
                 </div>
                 <CardTitle>Trust & Safety</CardTitle>
               </CardHeader>
@@ -107,8 +107,8 @@ export default function AboutPage() {
 
             <Card className="text-center border-0 shadow-lg">
               <CardHeader>
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="h-8 w-8 text-green-600" />
+                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="h-8 w-8 text-yellow-600" />
                 </div>
                 <CardTitle>Quality First</CardTitle>
               </CardHeader>
@@ -121,8 +121,8 @@ export default function AboutPage() {
 
             <Card className="text-center border-0 shadow-lg">
               <CardHeader>
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="h-8 w-8 text-purple-600" />
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-emerald-700" />
                 </div>
                 <CardTitle>24/7 Support</CardTitle>
               </CardHeader>
@@ -135,6 +135,13 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-emerald-950 text-white py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-yellow-400/80">&copy; 2025 Casa Blanca Hotels. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -192,11 +192,11 @@ export function HeroWithSearch() {
         }}
         transition={{ duration: 0.8 }}
       >
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-no-repeat"></div>
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60"
+          className="absolute inset-0 bg-gradient-to-b from-emerald-950/70 via-emerald-900/60 to-emerald-950/80"
           animate={{
-            opacity: isExpanded ? 0.9 : 1,
+            opacity: isExpanded ? 0.95 : 1,
           }}
           transition={{ duration: 0.6 }}
         />
@@ -216,7 +216,7 @@ export function HeroWithSearch() {
         
         {/* Hero Content - Taglines */}
         <motion.div 
-          className="absolute inset-0 flex items-center justify-center px-4"
+          className="absolute inset-0 flex items-start justify-center px-4 pt-32 md:pt-40"
           animate={{
             opacity: showTaglines ? 1 : 0,
             y: showTaglines ? 0 : -30,
@@ -225,48 +225,58 @@ export function HeroWithSearch() {
           style={{ pointerEvents: showTaglines ? 'auto' : 'none' }}
         >
           <div className="text-center w-full max-w-4xl">
-            {/* Badge */}
+            {/* Elegant Divider */}
             <motion.div 
-              className="mb-4"
+              className="mb-6 flex items-center justify-center gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <span className="inline-block px-6 py-2 bg-white/95 backdrop-blur-md text-gray-800 text-sm font-semibold rounded-full shadow-2xl border border-gray-200/50">
-                🌴 Find Your <span className="text-blue-600 font-bold">Perfect Stay</span>
-              </span>
+              <div className="w-16 h-[1px] bg-gradient-to-r from-transparent to-yellow-500/70"></div>
+              <span className="text-yellow-400 text-sm font-medium tracking-[0.3em] uppercase">By Ruhi</span>
+              <div className="w-16 h-[1px] bg-gradient-to-l from-transparent to-yellow-500/70"></div>
             </motion.div>
 
             {/* Main heading */}
             <motion.h1 
-              className="mb-3 text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight"
+              className="mb-4 text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-dancing-script"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <span className="text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
-                Discover
+              <span className="text-yellow-400 drop-shadow-[0_4px_12px_rgba(202,138,4,0.4)]">
+                Casa Blanca
               </span>
             </motion.h1>
             
             <motion.h2 
-              className="mb-6 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight"
+              className="mb-6 text-lg font-medium sm:text-xl md:text-2xl lg:text-3xl leading-tight tracking-wide"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <span className="text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
-                Amazing Places
+              <span className="text-white/90 font-montserrat">
+                Experience Luxury in Los Angeles
               </span>
             </motion.h2>
+
+            {/* Elegant Divider */}
+            <motion.div 
+              className="mb-6 flex items-center justify-center"
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ delay: 0.55 }}
+            >
+              <div className="w-24 h-[2px] bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
+            </motion.div>
             
             <motion.p 
-              className="mx-auto mb-10 max-w-2xl text-base text-white/95 sm:text-lg md:text-xl leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]"
+              className="mx-auto mb-10 max-w-2xl text-base text-white/80 sm:text-lg md:text-xl leading-relaxed font-montserrat"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              Premium accommodations for your perfect vacation or business trip.
+              Discover our collection of premium boutique accommodations, where timeless elegance meets modern comfort.
             </motion.p>
           </div>
         </motion.div>
@@ -337,7 +347,7 @@ export function HeroWithSearch() {
                       }}
                     >
                       <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col group bg-white">
-                        <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500 overflow-hidden">
+                        <div className="relative h-48 bg-gradient-to-br from-emerald-800 to-green-950 overflow-hidden">
                           <ImageCarousel 
                             photos={property.photos || []} 
                             alt={property.name}
@@ -363,7 +373,7 @@ export function HeroWithSearch() {
                               {property.amenities.slice(0, 3).map((amenity) => (
                                 <span
                                   key={amenity}
-                                  className="inline-block bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full"
+                                  className="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full"
                                 >
                                   {amenity}
                                 </span>
@@ -373,7 +383,7 @@ export function HeroWithSearch() {
 
                           <Button
                             onClick={() => handleBookProperty(property.id)}
-                            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold"
+                            className="w-full bg-gradient-to-r from-emerald-800 to-emerald-900 hover:from-emerald-900 hover:to-green-950 text-yellow-400 border border-yellow-600/50 font-semibold"
                           >
                             View Details & Book
                             <ChevronRight className="w-4 h-4 ml-2" />

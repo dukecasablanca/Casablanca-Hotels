@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Building2, Menu, X, Home, Phone, Info } from 'lucide-react';
 
@@ -13,19 +14,24 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="sticky top-0 z-[200] bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm">
+    <nav className="sticky top-0 z-[200] bg-emerald-950 backdrop-blur-xl border-b border-yellow-600/20 shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-3 group">
-            <div className="relative p-3 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg group-hover:shadow-xl group-hover:from-blue-600 group-hover:to-purple-700 transition-all duration-300 w-12 h-12 flex items-center justify-center">
-              <span className="relative text-white font-bold text-2xl font-dancing-script z-10">C</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-dancing-script font-bold">
+          <a href="/" className="flex items-center gap-3 group">
+            <Image
+              src="/images/logo.png"
+              alt="Casa Blanca"
+              width={160}
+              height={64}
+              className="h-16 w-auto object-contain"
+              priority
+            />
+            <div className="flex flex-col items-center">
+              <span className="text-xl md:text-2xl text-yellow-300 font-dancing-script font-bold leading-tight">
                 Casa Blanca
               </span>
-              <span className="text-[10px] font-medium text-gray-600 tracking-widest uppercase text-center -mt-1 font-montserrat">
+              <span className="text-[10px] font-medium text-yellow-300/60 tracking-[0.2em] uppercase font-montserrat text-center">
                 HOTELS
               </span>
             </div>
@@ -35,28 +41,28 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center space-x-8">
             <a 
               href="/" 
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-50"
+              className="text-yellow-100/90 hover:text-yellow-400 font-medium transition-colors duration-200 flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-yellow-500/10"
             >
               <Home className="h-4 w-4" />
               <span>Home</span>
             </a>
             <Link 
               href="/properties" 
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-50"
+              className="text-yellow-100/90 hover:text-yellow-400 font-medium transition-colors duration-200 flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-yellow-500/10"
             >
               <Building2 className="h-4 w-4" />
               <span>Properties</span>
             </Link>
             <Link 
               href="/about" 
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-50"
+              className="text-yellow-100/90 hover:text-yellow-400 font-medium transition-colors duration-200 flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-yellow-500/10"
             >
               <Info className="h-4 w-4" />
               <span>About</span>
             </Link>
             <Link 
               href="/contact" 
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-50"
+              className="text-yellow-100/90 hover:text-yellow-400 font-medium transition-colors duration-200 flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-yellow-500/10"
             >
               <Phone className="h-4 w-4" />
               <span>Contact</span>
@@ -66,7 +72,7 @@ export default function Navigation() {
           {/* CTA Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-3">
             <Link href="/properties">
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2">
+              <Button className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-emerald-950 font-semibold border border-yellow-400/50 px-6 py-2 shadow-lg hover:shadow-yellow-500/30">
                 Book Now
               </Button>
             </Link>
@@ -75,44 +81,44 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMobileMenu}
-            className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            className="lg:hidden p-2 hover:bg-yellow-500/10 rounded-lg transition-colors"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-gray-900" />
+              <X className="h-6 w-6 text-yellow-400" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-900" />
+              <Menu className="h-6 w-6 text-yellow-400" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden pb-4 border-t border-gray-100">
+          <div className="lg:hidden pb-4 border-t border-yellow-600/20">
             <div className="flex flex-col space-y-2 pt-4">
               <a 
                 href="/" 
-                className="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-lg hover:bg-gray-50"
+                className="text-yellow-100/90 hover:text-yellow-400 font-medium px-4 py-2 rounded-lg hover:bg-yellow-500/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </a>
               <Link 
                 href="/properties" 
-                className="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-lg hover:bg-gray-50"
+                className="text-yellow-100/90 hover:text-yellow-400 font-medium px-4 py-2 rounded-lg hover:bg-yellow-500/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Properties
               </Link>
               <Link 
                 href="/about" 
-                className="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-lg hover:bg-gray-50"
+                className="text-yellow-100/90 hover:text-yellow-400 font-medium px-4 py-2 rounded-lg hover:bg-yellow-500/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
               </Link>
               <Link 
                 href="/contact" 
-                className="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-lg hover:bg-gray-50"
+                className="text-yellow-100/90 hover:text-yellow-400 font-medium px-4 py-2 rounded-lg hover:bg-yellow-500/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
@@ -121,7 +127,7 @@ export default function Navigation() {
                 href="/properties"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white mt-4">
+                <Button className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-emerald-950 font-semibold border border-yellow-400/50 mt-4">
                   Book Now
                 </Button>
               </Link>

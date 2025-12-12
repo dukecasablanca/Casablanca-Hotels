@@ -37,17 +37,17 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-emerald-900 via-emerald-800 to-green-950 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Contact Us
+              Contact <span className="text-yellow-400">Us</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100">
+            <p className="text-xl md:text-2xl text-yellow-100/80">
               We&apos;re here to help! Get in touch with any questions or concerns.
             </p>
           </div>
@@ -65,12 +65,12 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <Card>
                   <CardContent className="flex items-center space-x-4 p-6">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                      <Phone className="h-6 w-6 text-emerald-800" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-600">1-800-MOTELS (668-3577)</p>
+                      <p className="text-gray-600">1-800-CASA-BLA</p>
                       <p className="text-sm text-gray-500">Available 24/7</p>
                     </div>
                   </CardContent>
@@ -78,12 +78,12 @@ export default function ContactPage() {
 
                 <Card>
                   <CardContent className="flex items-center space-x-4 p-6">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                      <Mail className="h-6 w-6 text-green-600" />
+                    <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                      <Mail className="h-6 w-6 text-yellow-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">support@motelbooking.com</p>
+                      <p className="text-gray-600">info@casablancahotels.com</p>
                       <p className="text-sm text-gray-500">We&apos;ll respond within 24 hours</p>
                     </div>
                   </CardContent>
@@ -91,8 +91,8 @@ export default function ContactPage() {
 
                 <Card>
                   <CardContent className="flex items-center space-x-4 p-6">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                      <MapPin className="h-6 w-6 text-purple-600" />
+                    <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                      <MapPin className="h-6 w-6 text-emerald-700" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Address</h3>
@@ -104,8 +104,8 @@ export default function ContactPage() {
 
                 <Card>
                   <CardContent className="flex items-center space-x-4 p-6">
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                      <Clock className="h-6 w-6 text-orange-600" />
+                    <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                      <Clock className="h-6 w-6 text-yellow-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Business Hours</h3>
@@ -211,7 +211,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-emerald-900/5 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
@@ -270,6 +270,13 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-emerald-950 text-white py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-yellow-400/80">&copy; 2025 Casa Blanca Hotels. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
