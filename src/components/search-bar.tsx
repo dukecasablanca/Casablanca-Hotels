@@ -197,12 +197,12 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
       
       <div className={gridClasses[variant]}>
         {/* Property Selection - Hidden on mobile when in expanded/scrolled mode */}
-        <div className={`relative ${variant === 'expanded' ? 'hidden sm:block flex-1 min-w-[180px]' : ''}`}>
+        <div className={`relative ${variant === 'expanded' ? 'hidden sm:block flex-1 sm:min-w-[180px]' : ''}`}>
           <label className="hidden block text-[10px] sm:text-xs text-yellow-400/80 font-semibold mb-0.5 sm:mb-1 tracking-wide">Property</label>
           <div className="relative">
             <Building2 className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-yellow-500" />
             <select 
-              className={`w-full p-2 sm:p-3 pl-8 sm:pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 bg-emerald-900/80 appearance-none text-yellow-100 font-medium text-xs sm:text-sm md:text-base ${variant === 'expanded' ? 'text-sm py-2' : ''}`}
+              className={`w-full p-2 sm:p-3 pl-7 sm:pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 bg-emerald-900/80 appearance-none text-yellow-100 font-medium text-[11px] sm:text-sm md:text-base ${variant === 'expanded' ? 'text-xs sm:text-sm py-2' : ''}`}
               value={selectedProperty}
               onChange={(e) => setSelectedProperty(e.target.value)}
             >
@@ -217,14 +217,14 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
         </div>
 
         {/* Check-in */}
-        <div className={`relative ${variant === 'expanded' ? 'min-w-[140px]' : ''}`}>
+        <div className={`relative ${variant === 'expanded' ? 'sm:min-w-[140px]' : ''}`}>
           <label className="hidden block text-[10px] sm:text-xs text-yellow-400/80 font-semibold mb-0.5 sm:mb-1 tracking-wide">Check-in</label>
           <div className="relative">
             <Calendar className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-yellow-500" />
             <input 
               type="date" 
               aria-label="Check-in date"
-              className={`w-full p-2 sm:p-3 pl-8 sm:pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 bg-emerald-900/80 text-yellow-100 font-medium text-xs sm:text-sm md:text-base ${variant === 'expanded' ? 'text-sm py-2' : ''}`}
+              className={`w-full p-2 sm:p-3 pl-7 sm:pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 bg-emerald-900/80 text-yellow-100 font-medium text-[11px] sm:text-sm md:text-base ${variant === 'expanded' ? 'text-xs sm:text-sm py-2' : ''}`}
               value={checkIn}
               onChange={(e) => {
                 setCheckIn(e.target.value);
@@ -241,7 +241,7 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
         </div>
 
         {/* Check-out */}
-        <div className={`relative ${variant === 'expanded' ? 'min-w-[140px]' : ''}`}>
+        <div className={`relative ${variant === 'expanded' ? 'sm:min-w-[140px]' : ''}`}>
           <label className="hidden block text-[10px] sm:text-xs text-yellow-400/80 font-semibold mb-0.5 sm:mb-1 tracking-wide">
             Check-out {nights && <span className="text-yellow-300">({nights}N)</span>}
           </label>
@@ -250,7 +250,7 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
             <input 
               type="date" 
               aria-label="Check-out date"
-              className={`w-full p-2 sm:p-3 pl-8 sm:pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 bg-emerald-900/80 text-yellow-100 font-medium text-xs sm:text-sm md:text-base ${variant === 'expanded' ? 'text-sm py-2' : ''}`}
+              className={`w-full p-2 sm:p-3 pl-7 sm:pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 bg-emerald-900/80 text-yellow-100 font-medium text-[11px] sm:text-sm md:text-base ${variant === 'expanded' ? 'text-xs sm:text-sm py-2' : ''}`}
               value={checkOut}
               onChange={(e) => setCheckOut(e.target.value)}
               min={checkIn || new Date().toISOString().split('T')[0]} // Minimum is check-in date or today
@@ -258,12 +258,12 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
           </div>
         </div>
         {/* Guests */}
-        <div className={`relative ${variant === 'expanded' ? 'min-w-[120px]' : ''}`}>
+        <div className={`relative ${variant === 'expanded' ? 'sm:min-w-[120px]' : ''}`}>
           <label className="hidden block text-[10px] sm:text-xs text-yellow-400/80 font-semibold mb-0.5 sm:mb-1 tracking-wide">Guests</label>
           <div className="relative">
             <Users className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-yellow-500" />
             <select 
-              className={`w-full p-2 sm:p-3 pl-8 sm:pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 appearance-none bg-emerald-900/80 text-yellow-100 font-medium text-xs sm:text-sm md:text-base ${variant === 'expanded' ? 'text-sm py-2' : ''}`}
+              className={`w-full p-2 sm:p-3 pl-7 sm:pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 appearance-none bg-emerald-900/80 text-yellow-100 font-medium text-[11px] sm:text-sm md:text-base ${variant === 'expanded' ? 'text-xs sm:text-sm py-2' : ''}`}
               value={guests}
               onChange={(e) => setGuests(e.target.value)}
             >
