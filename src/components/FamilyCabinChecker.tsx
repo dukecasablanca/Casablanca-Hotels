@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 export function FamilyCabinChecker() {
   const router = useRouter();
-  
+  //code
   // Get dates a week from now for default values (since current dates show no availability)
   const getWeekFromNow = () => {
     const date = new Date();
