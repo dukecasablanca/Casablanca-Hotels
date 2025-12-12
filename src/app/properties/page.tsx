@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { properties } from '@/lib/properties-data';
 import { generateBookingUrl } from '@/lib/booking-redirect';
-import { Calendar, Users, MapPin, ChevronRight } from 'lucide-react';
+import { Calendar, Users, MapPin, ChevronRight, Phone } from 'lucide-react';
 import React from 'react';
 import { ImageCarousel } from '@/components/ImageCarousel';
 
@@ -158,6 +158,23 @@ function PropertiesPageContent() {
 
                 <CardContent className="flex-1 flex flex-col justify-between">
                   <p className="text-gray-700 mb-4">{property.description}</p>
+
+                  {(property.contact || property.address) && (
+                    <div className="text-sm text-gray-600 mb-4">
+                      {property.contact && (
+                        <div className="flex items-center">
+                          <Phone className="w-4 h-4 mr-2" />
+                          <a href={`tel:${property.contact}`} className="underline">{property.contact}</a>
+                        </div>
+                      )}
+                      {property.address && (
+                        <div className="flex items-center mt-1">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          <span>{property.address}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
 
                   {/* Amenities */}
                   <div className="mb-6">
