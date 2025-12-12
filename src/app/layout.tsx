@@ -21,9 +21,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Casa Blanca Hotels - Premium LA Experience",
-  description: "Experience luxury and elegance at Casa Blanca Hotels, Los Angeles' premier boutique hotel collection",
-  
+  title: "Casa Blanca Inn - Premium LA Experience",
+  description: "Experience luxury and elegance at Casa Blanca Inn by Dream Luxe, Los Angeles' premier boutique hotel collection",
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({

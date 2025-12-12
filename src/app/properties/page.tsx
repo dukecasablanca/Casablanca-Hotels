@@ -61,10 +61,10 @@ function PropertiesPageContent() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-8 bg-gradient-to-r from-emerald-900 via-emerald-800 to-green-950 text-white">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Our Properties</h1>
-          <p className="text-lg text-blue-100">
+          <p className="text-lg text-yellow-300/80">
             Discover our collection of premium accommodations
           </p>
         </div>
@@ -85,7 +85,7 @@ function PropertiesPageContent() {
                   type="date"
                   value={checkIn}
                   onChange={(e) => setCheckIn(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent"
                 />
               </div>
               <div>
@@ -97,7 +97,7 @@ function PropertiesPageContent() {
                   type="date"
                   value={checkOut}
                   onChange={(e) => setCheckOut(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent"
                 />
               </div>
                 <div>
@@ -108,7 +108,7 @@ function PropertiesPageContent() {
                 <select
                   value={guests}
                   onChange={(e) => setGuests(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent"
                 >
                   {[1, 2].map(n => (
                     <option key={n} value={n}>{n} {n === 1 ? 'Guest' : 'Guests'}</option>
@@ -122,7 +122,7 @@ function PropertiesPageContent() {
                       document.getElementById('properties-list')?.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full bg-gradient-to-r from-emerald-800 to-emerald-900 hover:from-emerald-900 hover:to-green-950 text-yellow-400 border border-yellow-600/50"
                 >
                   Search
                 </Button>
@@ -139,7 +139,7 @@ function PropertiesPageContent() {
             {properties.map((property) => (
               <Card key={property.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                 {/* Image Carousel */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500 overflow-hidden">
+                <div className="relative h-48 bg-gradient-to-br from-emerald-800 to-green-950 overflow-hidden">
                   <ImageCarousel 
                     photos={property.photos || []} 
                     alt={property.name}
@@ -183,7 +183,7 @@ function PropertiesPageContent() {
                       {property.amenities.map((amenity) => (
                         <span
                           key={amenity}
-                          className="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full"
+                          className="inline-block bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full"
                         >
                           {amenity}
                         </span>
@@ -206,7 +206,7 @@ function PropertiesPageContent() {
                       });
                       window.location.href = bookingUrl;
                     }}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold"
+                    className="w-full bg-gradient-to-r from-emerald-800 to-emerald-900 hover:from-emerald-900 hover:to-green-950 text-yellow-400 border border-yellow-600/50 font-semibold"
                   >
                     View Details & Book
                     <ChevronRight className="w-4 h-4 ml-2" />
@@ -219,11 +219,11 @@ function PropertiesPageContent() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-emerald-900 via-emerald-800 to-green-950 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Can't find what you're looking for?</h2>
-          <p className="text-lg text-blue-100 mb-8">Contact our team for more information</p>
-          <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3">
+          <p className="text-lg text-yellow-300/80 mb-8">Contact our team for more information</p>
+          <Button className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-emerald-900 hover:from-yellow-400 hover:to-yellow-500 px-8 py-3 border border-yellow-400/50 font-semibold">
             Contact Us
           </Button>
         </div>

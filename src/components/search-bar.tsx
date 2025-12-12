@@ -146,9 +146,9 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
 
   // Style classes based on variant
   const baseFormClasses = {
-    default: "mx-auto max-w-5xl rounded-2xl bg-white/90 backdrop-blur-sm p-4 sm:p-6 shadow-2xl border border-white/40",
-    compact: "mx-auto max-w-5xl rounded-xl bg-white p-4 sm:p-5 shadow-md border border-gray-100",
-    expanded: "mx-auto max-w-6xl rounded-xl bg-white/95 backdrop-blur-sm py-3 px-4 shadow-lg border border-gray-200"
+    default: "mx-auto max-w-5xl rounded-2xl bg-emerald-950/95 backdrop-blur-sm p-4 sm:p-6 shadow-2xl border border-yellow-600/30",
+    compact: "mx-auto max-w-5xl rounded-xl bg-emerald-950/95 p-4 sm:p-5 shadow-md border border-yellow-600/30",
+    expanded: "mx-auto max-w-6xl rounded-xl bg-emerald-950/95 backdrop-blur-sm py-3 px-4 shadow-lg border border-yellow-600/30"
   };
   
   // Add animation classes when searching
@@ -157,9 +157,9 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
   }`;
 
   const buttonClasses = {
-    default: "w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 font-semibold text-white shadow-xl transition-all duration-300 py-3 text-base hover:shadow-2xl transform hover:scale-[1.01] disabled:opacity-70 disabled:cursor-not-allowed",
-    compact: "w-full bg-blue-600 hover:bg-blue-700 font-semibold text-white transition-all duration-200 py-3 text-sm disabled:opacity-70 disabled:cursor-not-allowed",
-    expanded: "bg-blue-600 hover:bg-blue-700 font-semibold text-white transition-all duration-200 px-6 py-3 rounded-lg disabled:opacity-70 disabled:cursor-not-allowed"
+    default: "w-full bg-gradient-to-r from-emerald-700 to-emerald-800 hover:from-emerald-800 hover:to-emerald-900 font-semibold text-yellow-400 border border-yellow-600/50 shadow-xl transition-all duration-300 py-3 text-base hover:shadow-yellow-500/20 transform hover:scale-[1.01] disabled:opacity-70 disabled:cursor-not-allowed",
+    compact: "w-full bg-emerald-800 hover:bg-emerald-900 font-semibold text-yellow-400 border border-yellow-600/50 transition-all duration-200 py-3 text-sm disabled:opacity-70 disabled:cursor-not-allowed",
+    expanded: "bg-emerald-800 hover:bg-emerald-900 font-semibold text-yellow-400 border border-yellow-600/50 transition-all duration-200 px-6 py-3 rounded-lg disabled:opacity-70 disabled:cursor-not-allowed"
   };
 
   const gridClasses = {
@@ -183,26 +183,26 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
       {/* Single row of labels at the top - hide for expanded variant */}
       {variant !== 'expanded' && (
         <div className="hidden sm:flex justify-between mb-1 px-1 py-1">
-          <span className="text-xs text-gray-600 font-semibold px-2 flex-1">Property</span>
-          <span className="text-xs text-gray-600 font-semibold px-2 flex-1">Check-in Date</span>
-          <span className="text-xs text-gray-600 font-semibold flex items-center px-2 flex-1">
+          <span className="text-xs text-yellow-400/80 font-semibold px-2 flex-1 tracking-wide">Property</span>
+          <span className="text-xs text-yellow-400/80 font-semibold px-2 flex-1 tracking-wide">Check-in Date</span>
+          <span className="text-xs text-yellow-400/80 font-semibold flex items-center px-2 flex-1 tracking-wide">
             Check-out Date
             {nights && (
-              <span className="ml-2 text-blue-600">({nights} night{nights !== 1 ? 's' : ''})</span>
+              <span className="ml-2 text-yellow-300">({nights} night{nights !== 1 ? 's' : ''})</span>
             )}
           </span>
-          <span className="text-xs text-gray-600 font-semibold px-2 flex-1">Guests</span>
+          <span className="text-xs text-yellow-400/80 font-semibold px-2 flex-1 tracking-wide">Guests</span>
         </div>
       )}
       
       <div className={gridClasses[variant]}>
         {/* Property Selection */}
         <div className={`relative ${variant === 'expanded' ? 'flex-1 min-w-[180px]' : ''}`}>
-          <label className="sm:hidden block text-xs text-gray-600 font-semibold mb-1">Property</label>
+          <label className="sm:hidden block text-xs text-yellow-400/80 font-semibold mb-1 tracking-wide">Property</label>
           <div className="relative">
-            <Building2 className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-blue-600" />
+            <Building2 className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-yellow-500" />
             <select 
-              className={`w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white appearance-none text-gray-800 font-medium ${variant === 'expanded' ? 'text-sm py-2.5' : 'text-base'}`}
+              className={`w-full p-3 pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 bg-emerald-900/80 appearance-none text-yellow-100 font-medium ${variant === 'expanded' ? 'text-sm py-2.5' : 'text-base'}`}
               value={selectedProperty}
               onChange={(e) => setSelectedProperty(e.target.value)}
             >
@@ -218,13 +218,13 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
 
         {/* Check-in */}
         <div className={`relative ${variant === 'expanded' ? 'min-w-[140px]' : ''}`}>
-          <label className="sm:hidden block text-xs text-gray-600 font-semibold mb-1">Check-in Date</label>
+          <label className="sm:hidden block text-xs text-yellow-400/80 font-semibold mb-1 tracking-wide">Check-in Date</label>
           <div className="relative">
-            <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-blue-600" />
+            <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-yellow-500" />
             <input 
               type="date" 
               aria-label="Check-in date"
-              className={`w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800 font-medium ${variant === 'expanded' ? 'text-sm py-2.5' : 'text-base'}`}
+              className={`w-full p-3 pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 bg-emerald-900/80 text-yellow-100 font-medium ${variant === 'expanded' ? 'text-sm py-2.5' : 'text-base'}`}
               value={checkIn}
               onChange={(e) => {
                 setCheckIn(e.target.value);
@@ -242,15 +242,15 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
 
         {/* Check-out */}
         <div className={`relative ${variant === 'expanded' ? 'min-w-[140px]' : ''}`}>
-          <label className="sm:hidden block text-xs text-gray-600 font-semibold mb-1">
-            Check-out Date {nights && <span className="text-blue-600">({nights} night{nights !== 1 ? 's' : ''})</span>}
+          <label className="sm:hidden block text-xs text-yellow-400/80 font-semibold mb-1 tracking-wide">
+            Check-out Date {nights && <span className="text-yellow-300">({nights} night{nights !== 1 ? 's' : ''})</span>}
           </label>
           <div className="relative">
-            <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-blue-600" />
+            <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-yellow-500" />
             <input 
               type="date" 
               aria-label="Check-out date"
-              className={`w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800 font-medium ${variant === 'expanded' ? 'text-sm py-2.5' : 'text-base'}`}
+              className={`w-full p-3 pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 bg-emerald-900/80 text-yellow-100 font-medium ${variant === 'expanded' ? 'text-sm py-2.5' : 'text-base'}`}
               value={checkOut}
               onChange={(e) => setCheckOut(e.target.value)}
               min={checkIn || new Date().toISOString().split('T')[0]} // Minimum is check-in date or today
@@ -259,11 +259,11 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
         </div>
         {/* Guests */}
         <div className={`relative ${variant === 'expanded' ? 'min-w-[120px]' : ''}`}>
-          <label className="sm:hidden block text-xs text-gray-600 font-semibold mb-1">Guests</label>
+          <label className="sm:hidden block text-xs text-yellow-400/80 font-semibold mb-1 tracking-wide">Guests</label>
           <div className="relative">
-            <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-blue-600" />
+            <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-yellow-500" />
             <select 
-              className={`w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent appearance-none bg-white text-gray-800 font-medium ${variant === 'expanded' ? 'text-sm py-2.5' : 'text-base'}`}
+              className={`w-full p-3 pl-10 border border-yellow-600/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500 appearance-none bg-emerald-900/80 text-yellow-100 font-medium ${variant === 'expanded' ? 'text-sm py-2.5' : 'text-base'}`}
               value={guests}
               onChange={(e) => setGuests(e.target.value)}
             >
@@ -299,7 +299,7 @@ export function SearchBar({ variant = 'default', initialValues = {}, onSearchSta
           disabled={isSearching}
           className={`${buttonClasses[variant]} relative overflow-hidden group`}
         >
-          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-30 transition-opacity duration-300"></span>
+          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-600 to-yellow-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
           {isSearching ? (
             <>
               <Loader2 className="h-5 w-5 mr-2 relative z-10 animate-spin" />
