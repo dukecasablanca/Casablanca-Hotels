@@ -67,10 +67,10 @@ function PropertiesPageContent() {
         
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight font-serif">
-            Find Your <span className="text-yellow-300">Perfect Stay</span>
+            Our <span className="text-yellow-300">Properties</span>
           </h1>
           <p className="text-lg md:text-xl text-yellow-100/80 max-w-2xl mx-auto mb-10 font-light">
-            Discover our collection of premium accommodations designed for comfort and style.
+            Comfortable and affordable hotels across Southern California. Choose from our locations in Orange, Azusa, Corona, Riverside, and more.
           </p>
         </div>
       </section>

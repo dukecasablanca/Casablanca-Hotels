@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
@@ -131,13 +132,13 @@ export default function HomePage() {
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-yellow-600 font-semibold mb-2 text-sm uppercase tracking-wider font-montserrat">Casa Blanca&apos;s Premier Experience</p>
+            <p className="text-yellow-600 font-semibold mb-2 text-sm uppercase tracking-wider font-montserrat">The Casa Blanca Difference</p>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-800 to-yellow-600 bg-clip-text text-transparent font-dancing-script">Casa Blanca</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto font-montserrat">
-              Experience the epitome of luxury and elegance at Casa Blanca, 
-              Los Angeles&apos; most distinguished boutique hotel with world-class amenities and unparalleled service.
+              Discover comfortable, affordable accommodations across Southern California. 
+              Casa Blanca offers clean rooms, friendly service, and convenient locations for every traveler.
             </p>
           </div>
 
@@ -146,13 +147,13 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full flex items-center justify-center mb-6 group-hover:from-yellow-500 group-hover:to-yellow-600 transition-all duration-300">
                 <Star className="h-8 w-8 text-yellow-600 group-hover:text-emerald-900 transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Hollywood Glamour</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Best Value Stays</h3>
               <p className="text-gray-600 leading-relaxed">
-                Experience the magic of Hollywood with luxury suites, premium amenities, and star-worthy service in the heart of LA.
+                Get more for your money with clean, comfortable rooms at affordable rates. Quality accommodation without breaking the bank.
               </p>
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <p className="text-yellow-600 font-medium flex items-center">
-                  <span>Celebrity-approved</span>
+                  <span>Unbeatable prices</span>
                   <span className="flex ml-2">
                     {[1, 2, 3, 4, 5].map((n) => (
                       <Star key={n} className="h-3 w-3 text-yellow-400 fill-current" />
@@ -166,13 +167,13 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center mb-6 group-hover:from-emerald-700 group-hover:to-emerald-800 transition-all duration-300">
                 <Shield className="h-8 w-8 text-emerald-700 group-hover:text-yellow-400 transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Prime Locations</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Convenient Locations</h3>
               <p className="text-gray-600 leading-relaxed">
-                Stay in LA&apos;s most coveted neighborhoods, from beachfront Santa Monica to the vibrant streets of West Hollywood.
+                Multiple properties across Southern California - Orange, Azusa, Corona, Riverside, and more. Always close to where you need to be.
               </p>
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <p className="text-emerald-700 font-medium">
-                  25+ Premium LA Locations
+                  9+ SoCal locations
                 </p>
               </div>
             </div>
@@ -181,13 +182,13 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center mb-6 group-hover:from-emerald-800 group-hover:to-emerald-900 transition-all duration-300">
                 <Clock className="h-8 w-8 text-emerald-800 group-hover:text-yellow-400 transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">24/7 LA Concierge</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Friendly Service</h3>
               <p className="text-gray-600 leading-relaxed">
-                Our local LA experts are available round-the-clock to help you discover hidden gems and exclusive experiences.
+                Our welcoming staff is here to make your stay comfortable. From check-in to check-out, expect warm hospitality every time.
               </p>
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <p className="text-emerald-800 font-medium">
-                  Local insider knowledge included
+                  24/7 front desk support
                 </p>
               </div>
             </div>
@@ -196,13 +197,13 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center mb-6 group-hover:from-green-800 group-hover:to-green-900 transition-all duration-300">
                 <Wifi className="h-8 w-8 text-green-800 group-hover:text-yellow-400 transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">California Lifestyle</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Essential Amenities</h3>
               <p className="text-gray-600 leading-relaxed">
-                Enjoy rooftop pools, fitness centers, spa services, and dining that captures the essence of LA living.
+                Free WiFi, parking, air conditioning, and clean private bathrooms. Everything you need for a comfortable stay.
               </p>
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <p className="text-green-800 font-medium">
-                  Resort-style amenities
+                  Free WiFi & parking included
                 </p>
               </div>
             </div>
@@ -214,12 +215,12 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-br from-emerald-900/5 via-white to-yellow-600/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-yellow-600 font-semibold mb-2 text-sm uppercase tracking-wider">Guest Love Stories</p>
+            <p className="text-yellow-600 font-semibold mb-2 text-sm uppercase tracking-wider">Guest Reviews</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              <span className="bg-gradient-to-r from-emerald-800 to-yellow-600 bg-clip-text text-transparent">LA Experiences</span> That Inspire
+              <span className="bg-gradient-to-r from-emerald-800 to-yellow-600 bg-clip-text text-transparent">What Our Guests</span> Are Saying
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Hear from travelers who&apos;ve fallen in love with Los Angeles through our exceptional hospitality
+              Discover why travelers choose Casa Blanca for comfort, value, and warm hospitality across Southern California
             </p>
           </div>
 
@@ -232,15 +233,15 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-gray-700 mb-8 italic leading-relaxed text-lg">
-                &quot;Staying in Hollywood was a dream come true! The hotel&apos;s rooftop pool overlooked the city, and the concierge got us VIP access to exclusive LA spots. Unforgettable!&quot;
+                &quot;Perfect location near Disneyland! The rooms were spotless, staff was incredibly friendly, and the price was unbeatable. Will definitely stay at Casa Blanca Orange again!&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-emerald-900 font-bold text-lg">SM</span>
+                  <span className="text-emerald-900 font-bold text-lg">JT</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Sarah Martinez</h4>
-                  <p className="text-sm text-gray-500">Hollywood Experience</p>
+                  <h4 className="font-bold text-gray-900">Jennifer Thompson</h4>
+                  <p className="text-sm text-gray-500">Family Trip to Orange</p>
                 </div>
               </div>
             </div>
@@ -253,15 +254,15 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-gray-700 mb-8 italic leading-relaxed text-lg">
-                &quot;Santa Monica beachfront suite was incredible! Woke up to ocean views every morning, walked to the pier, and the spa treatments were world-class. Pure paradise!&quot;
+                &quot;Great value for money! Clean rooms, free parking, and the staff went above and beyond to make our stay comfortable. Perfect stop for our road trip through SoCal.&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-yellow-400 font-bold text-lg">MR</span>
+                  <span className="text-yellow-400 font-bold text-lg">DP</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Michael Rodriguez</h4>
-                  <p className="text-sm text-gray-500">Beach Vacation</p>
+                  <h4 className="font-bold text-gray-900">David Patel</h4>
+                  <p className="text-sm text-gray-500">Business Travel</p>
                 </div>
               </div>
             </div>
@@ -274,15 +275,15 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-gray-700 mb-8 italic leading-relaxed text-lg">
-                &quot;Beverly Hills luxury at its finest! The penthouse suite, personal butler service, and proximity to Rodeo Drive made this the perfect LA getaway. Five stars!&quot;
+                &quot;Cozy, affordable, and welcoming! The Azusa location was perfect for visiting family nearby. Quiet neighborhood, comfortable beds, and excellent hospitality. Highly recommend!&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-800 to-green-950 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-yellow-400 font-bold text-lg">EK</span>
+                  <span className="text-yellow-400 font-bold text-lg">MG</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Emily Kim</h4>
-                  <p className="text-sm text-gray-500">Luxury Weekend</p>
+                  <h4 className="font-bold text-gray-900">Maria Garcia</h4>
+                  <p className="text-sm text-gray-500">Weekend Getaway</p>
                 </div>
               </div>
             </div>
@@ -295,16 +296,15 @@ export default function HomePage() {
         {/* Abstract background elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-500 opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-yellow-400 opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-yellow-500 opacity-10 rounded-full"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Ready to Experience <span className="text-yellow-400 font-dancing-script">Casa Blanca</span>?
+              Book Your Stay at <span className="text-yellow-400 font-dancing-script">Casa Blanca</span>
             </h2>
             <p className="text-xl text-yellow-100/80 mb-10 max-w-2xl mx-auto leading-relaxed font-montserrat">
-              Join our guests who've discovered the perfect blend of luxury and comfort. 
-              From elegant suites to personalized service – your extraordinary stay awaits at Casa Blanca!
+              Experience comfortable rooms, friendly service, and great value across Southern California. 
+              Whether for business or leisure – your perfect stay awaits at Casa Blanca!
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/properties">
@@ -314,7 +314,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm px-10 py-4 text-lg font-semibold">
+                <Button size="lg" className="bg-gray-900 border-2 border-gray-700 text-white hover:bg-gray-800 px-10 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-200">
                   Contact Us
                 </Button>
               </Link>
@@ -351,7 +351,7 @@ export default function HomePage() {
                 <span className="font-montserrat font-bold tracking-wide uppercase text-sm text-yellow-400/80">HOTELS</span>
               </h3>
               <p className="text-gray-400 max-w-xs leading-relaxed font-montserrat">
-                Experience the elegance and luxury of Casa Blanca Hotels, Los Angeles' premier boutique hotel collection with world-class amenities and unparalleled service.
+                Comfortable and affordable accommodations across Southern California. Casa Blanca Hotels offers clean rooms, friendly service, and convenient locations for every traveler.
               </p>
               <div className="flex space-x-4 pt-2">
                 <a href="#" className="w-10 h-10 rounded-full bg-gradient-to-r from-emerald-700 to-emerald-800 flex items-center justify-center hover:from-emerald-600 hover:to-emerald-700 transition-all duration-200 border border-yellow-600/30">
