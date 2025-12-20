@@ -256,7 +256,7 @@ export function HeroWithSearch() {
               transition={{ delay: 0.5 }}
             >
               <span className="text-white/90 font-montserrat">
-                Experience Luxury in Los Angeles
+                Comfort & Value Across Southern California
               </span>
             </motion.h2>
 
@@ -276,7 +276,7 @@ export function HeroWithSearch() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              Discover our collection of premium boutique accommodations, where timeless elegance meets modern comfort.
+              Discover our collection of comfortable, affordable hotels in Orange, Azusa, Corona, Riverside, and more. Clean rooms, friendly service, and great locations.
             </motion.p>
           </div>
         </motion.div>
